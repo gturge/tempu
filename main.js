@@ -29,9 +29,13 @@ const windows = {main: null}
 
 app.on('ready', () => {
   const win = new BrowserWindow({
-    webPreferences: {nodeIntegration: true},
+    webPreferences: {
+      nodeIntegration: true,
+      sandbox: false,
+      contextIsolation: false,
+    },
     autoHideMenuBar: true,
-    width: 612,
+    width: 800,
     height: 768,
     resizable: true
   })
