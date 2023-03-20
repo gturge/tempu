@@ -4,8 +4,7 @@ import { Block } from './generic'
 
 export default styled(Block)`
   overflow: hidden;
-  width: 100vw;
-  height: 100vh;
   padding: 8px;
+  width: 100%;
+  height: 100%;
 `
-

@@ -50,9 +50,11 @@ export default createGlobalStyle`
 
   body {
     font-size: 12px;
-    font-family: Cantarell, sans-serif;
+    font-family: Ubuntu, Cantarell, sans-serif;
     background-color: var(--background);
     color: var(--foreground);
+    width: 100vw;
+    height: 100vh;
     overflow: hidden;
   }
 
