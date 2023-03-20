@@ -20,7 +20,7 @@ const tasksTotalTime = tasks => tasks.reduce((total, task) => total + task.total
 
 const Main = styled(Block)`
   display: grid;
-  grid: auto 1fr / auto 1fr auto;
+  grid: 1fr / auto 1fr auto;
   grid-gap: 8px;
   overflow: hidden;
   width: 100%;
@@ -143,18 +143,6 @@ export default () => {
   return (
     <MainLayout>
       <Main>
-        <Panel>
-          <Calendar date={date} />
-        </Panel>
-
-        <Panel>
-          <CalendarDate date={date} />
-        </Panel>
-
-        <Panel>
-          <WeekSummary date={date} tasks={tasks} />
-        </Panel>
-
         <Panel style={{gridColumn: '1 / 4', overflowY: 'auto'}}>
           <Table>
             {Array.from(sectionItems).reverse()}
