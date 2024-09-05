@@ -1,44 +1,45 @@
 {
-  "name": "tsheet",
+  "name": "tempu",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
+  "main": "app/dist/main.js",
+  "type": "module",
   "scripts": {
     "start": "NODE_ENV=develop electron . test.timesheet",
-    "test": "node -r @babel/register test.js",
-    "build": "parcel build renderer/index.js --target electron --out-dir app/ --public-url .",
-    "watch": "parcel watch renderer/index.js --target electron --out-dir app/ --public-url .",
-    "dist": "electron-builder --dir"
+    "build": "tsx scripts/build",
+    "watch": "tsx scripts/build watch",
+    "dist": "electron-builder --dir",
+    "package": "tsx scripts/package"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@babel/register": "^7.10.5",
     "chalk": "^4.1.2",
+    "chokidar": "^3.6.0",
     "dayjs": "^1.8.31",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "fs-plus": "^3.1.1",
     "keyboardjs": "^2.6.3",
     "lodash": "^4.17.19",
-    "parcel-bundler": "^1.12.4",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "rxjs": "^6.6.2",
-    "styled-components": "^4.4.1",
-    "uniqid": "^5.2.0"
+    "styled-components": "^6.1.13",
+    "uniqid": "^5.2.0",
+    "zustand": "^4.5.5"
   },
   "devDependencies": {
-    "@babel/core": "^7.11.0",
-    "@babel/plugin-proposal-class-properties": "^7.10.4",
-    "@babel/plugin-proposal-decorators": "^7.10.5",
-    "@babel/plugin-proposal-function-bind": "^7.10.5",
-    "babel-plugin-syntax-async-functions": "^6.13.0",
-    "babel-plugin-transform-react-jsx": "^6.24.1",
-    "babel-plugin-transform-regenerator": "^6.26.0",
-    "electron": "^23.1.4",
-    "electron-builder": "^22.8.0"
+    "@electron-forge/core": "^7.4.0",
+    "@electron/packager": "^18.3.4",
+    "@electron/rebuild": "^3.6.0",
+    "@types/node": "^22.5.1",
+    "@types/react": "^18.3.5",
+    "@types/react-dom": "^18.3.0",
+    "electron": "^32.0.2",
+    "esbuild": "^0.23.1",
+    "tsx": "^4.19.0"
   },
   "build": {}
 }

@@ -1,7 +1,5 @@
 node_modules/
 .env
-app/index.js
-app/index.js.map
-.cache
+app/dist
 dist/
 test.timesheet

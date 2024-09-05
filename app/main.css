@@ -1,0 +1,72 @@
+:root {
+  --background: #06001a;
+  --foreground: #b3cde9;
+
+  --normal-black: #222045;
+  --light-black: #3a376a;
+  --normal-red: #ce5c78;
+  --light-red: #dd647e;
+  --normal-green: #76e2c4;
+  --light-green: #83efd5;
+  --normal-yellow: #f6c792;
+  --light-yellow: #ffd8a6;
+  --normal-blue: #5589f1;
+  --light-blue: #578fff;
+  --normal-magenta: #a878cf;
+  --light-magenta: #b783dc;
+  --normal-cyan: #33d8e8;
+  --light-cyan: #37e2f9;
+  --normal-white: #777cc2;
+  --light-white: #bbbced;
+
+  --accent: var(--light-white);
+
+  --normal-black: #1a1925;
+  --light-black: #36344b;
+  --normal-white: #9db2c9;
+  --light-white: #dbdcfb;
+  --foreground: #bccbdb;
+  --background: #0a090e;
+
+  background-color: #00000;
+  color: var(--foreground);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  user-select: none;
+}
+
+body {
+  font-size: 12px;
+  font-family: Ubuntu, Cantarell, sans-serif;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#container {
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  background: var(--normal-black);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--normal-black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--light-black);
+}
