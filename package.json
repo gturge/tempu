@@ -1,7 +1,7 @@
 {
   "name": "tempu",
   "version": "1.0.0",
-  "description": "",
+  "description": "Manage timesheets and worklogs",
   "main": "app/dist/main.js",
   "type": "module",
   "scripts": {
@@ -12,32 +12,26 @@
     "package": "tsx scripts/package"
   },
   "keywords": [],
-  "author": "",
+  "author": "Guillaume Turgeon <contact@guillaumeturgeon.com>",
   "license": "ISC",
   "dependencies": {
     "chalk": "^4.1.2",
     "chokidar": "^3.6.0",
     "dayjs": "^1.8.31",
     "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "fs-plus": "^3.1.1",
-    "keyboardjs": "^2.6.3",
     "lodash": "^4.17.19",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "rxjs": "^6.6.2",
     "styled-components": "^6.1.13",
-    "uniqid": "^5.2.0",
-    "zustand": "^4.5.5"
+    "uniqid": "^5.2.0"
   },
   "devDependencies": {
-    "@electron-forge/core": "^7.4.0",
-    "@electron/packager": "^18.3.4",
-    "@electron/rebuild": "^3.6.0",
     "@types/node": "^22.5.1",
     "@types/react": "^18.3.5",
     "@types/react-dom": "^18.3.0",
-    "electron": "^32.0.2",
+    "electron": "^34.0.2",
+    "electron-builder": "^25.1.8",
     "esbuild": "^0.23.1",
     "tsx": "^4.19.0"
   },
