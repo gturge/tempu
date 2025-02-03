@@ -38,9 +38,27 @@ const NavButton = styled.button`
   `}
 `;
 
+function useLocalStorage<T>(key: string, initialValue: T): [T, (value: T) => void] {
+  function getStorage(): T {
+    const value =
+      (localStorage.getItem(key) && JSON.parse(localStorage.getItem(key)!)) ??
+      initialValue;
+    return value;
+  }
+
+  const [value, setValue] = useState(getStorage);
+
+  function setStorage(value: T) {
+    setValue(value);
+    localStorage.setItem(key, JSON.stringify(value));
+  }
+
+  return [value, setStorage];
+}
+
 function Main() {
   const [, dispatch] = useStore();
-  const [view, setView] = useState('tasks');
+  const [view, setView] = useLocalStorage<string>('view', 'tasks');
 
   useEffect(() => {
     bridgeApi.handleUpdate((timesheet) => {

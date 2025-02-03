@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import useStore from '../store';
-import AccumulationGraph from './AccumulationGraph';
+import AccumulationChart from './AccumulationChart';
 import MainLayout from './MainLayout';
 import Panel from './Panel';
 import { Block, Duration, Time } from './generic';
@@ -114,7 +114,7 @@ const GraphPanel = () => {
 
   return (
     <Panel>
-      <AccumulationGraph data={accumulation.map((value) => value / 60)} />
+      <AccumulationChart data={accumulation.map((value) => value / 60)} />
     </Panel>
   );
 };
